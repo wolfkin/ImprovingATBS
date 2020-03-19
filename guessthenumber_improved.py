@@ -1,22 +1,25 @@
-#This is a guess the number game
+#This is a guess the number game from Automate the boring stuff with python
+#reddit: jafakeittillyoujamak
+#
+
 import random
 
 continueFlag = 1
-user = "red"
+user = "red"  #Temporary
+##user = ""
 
 print('Welcome to the improved number guessing game\n\n')
 
 def nameCheck(word):
-	if word != "":
+	while word != "":
 		print('Hello ' + word + '. Would you like to change your name?')
-		changeName = str(input().lower)
-		print('Change ==> ' + changeName)
-		changeName = changeName[1]
-		print('Change 1st letter ==> ' + changeName)
-		if changeName == 'n':
+		changeName = input().lower()
+		if changeName[0] == 'n':
 			print('Alright keep playing ' + word)
-	word = input('Hello. What is your name? -->')
-	print('your name is ' + word)
+			break
+		word = input('Hello. What is your name? -->')
+		break
+        
 	return word
 
 while continueFlag == 1:
@@ -29,7 +32,7 @@ while continueFlag == 1:
 		print('Debug Mode: On')
 		print('\nDebug Mode: Exit is' + str(exit) + '\n\n')
 
-	exit.append(input('What is your safeword?\n'))
+	exit.append(input('What is your safeword?\n').lower())
 
 	if user == "debug":
 		print('\nDebug Mode: Exit is' + str(exit) + '\n\n')
@@ -56,6 +59,6 @@ while continueFlag == 1:
 	else:
 		print('Nope. the number I was thinking of was ' + str(secretNumber))
 	print('Would you like to play again? Enter (n) to exit or your safeword.')
-	playAgain=input().lower
+	playAgain=input().lower()
 	if playAgain in exit:
 		continueFlag = 0
