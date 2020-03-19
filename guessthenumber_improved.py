@@ -5,7 +5,7 @@
 import random
 
 continueFlag = 1
-user = "red"  #Temporary
+user = ""  #Temporary
 ##user = ""
 
 print('Welcome to the improved number guessing game\n\n')
@@ -16,10 +16,10 @@ def nameCheck(word):
 		changeName = input().lower()
 		if changeName[0] == 'n':
 			print('Alright keep playing ' + word)
-			break
-		word = input('Hello. What is your name? -->')
-		break
-        
+			return word
+		word = input('A->Hello. What is your name? -->')
+		return word
+	word = input('B->Hello. What is your name? -->')
 	return word
 
 while continueFlag == 1:
