@@ -1,12 +1,10 @@
 #This is a guess the number game from Automate the boring stuff with python
-#reddit: jafakeittillyoujamak
 #
 
 import random
 
 continueFlag = 1
-user = ""  #Temporary
-##user = ""
+user = ""
 
 print('Welcome to the improved number guessing game\n\n')
 
@@ -17,9 +15,9 @@ def nameCheck(word):
 		if changeName[0] == 'n':
 			print('Alright keep playing ' + word)
 			return word
-		word = input('A->Hello. What is your name? -->')
+		word = input('Hello. What is your name? -->')
 		return word
-	word = input('B->Hello. What is your name? -->')
+	word = input('Hello. What is your name? -->')
 	return word
 
 while continueFlag == 1:
