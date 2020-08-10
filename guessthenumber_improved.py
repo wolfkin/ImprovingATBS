@@ -1,5 +1,4 @@
 #This is a guess the number game from Automate the boring stuff with python
-#
 
 import random
 
